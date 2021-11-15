@@ -8,7 +8,7 @@ import io.ktor.routing.*
 fun Route.testRoute(
     repository: TestRepo
 ){
-    get("api/test"){
+    get("/api/test"){
         repository.addSomethingInDb()
 
         call.respondText { "Success" }
